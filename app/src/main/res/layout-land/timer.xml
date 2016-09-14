@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:id="@+id/timer" android:layout_width="fill_parent"
+	android:orientation="vertical" android:layout_height="fill_parent">
+	<LinearLayout android:layout_height="wrap_content"
+		android:gravity="center_vertical" android:id="@+id/timerMainRowLinearLayout"
+		android:layout_width="fill_parent">
+		<FrameLayout android:background="@color/blur"
+			android:layout_height="wrap_content" android:layout_weight="1"
+			android:id="@+id/timerFrameLayout1" android:layout_width="wrap_content">
+			<TextView android:focusable="true" android:clickable="true"
+				android:ellipsize="end" android:focusableInTouchMode="false"
+				android:textSize="15dip" android:text="Title (tap to edit)"
+				android:scrollHorizontally="true" android:layout_height="wrap_content"
+				android:textStyle="bold" android:layout_width="fill_parent"
+				android:textColor="@color/white"
+				android:background="@android:drawable/list_selector_background"
+				android:id="@+id/timerTitleTextView"></TextView>
+		</FrameLayout>
+		<ProgressBar android:id="@+id/timerProgressBar" android:layout_height="35dip" android:layout_width="35dip"></ProgressBar>
+		<CheckBox android:layout_height="35dip" android:layout_gravity="center_vertical"
+			android:id="@+id/timerIntervalRepeatCheckBox" android:button="@drawable/repeat_checkbox"
+			android:layout_width="wrap_content"></CheckBox>
+		<ImageButton android:layout_height="35dip"
+			android:src="@drawable/delete_small" android:layout_width="wrap_content"
+			android:id="@+id/timerXButton"></ImageButton>
+		<ImageButton android:layout_height="35dip"
+			android:src="@drawable/add_small" android:layout_width="wrap_content"
+			android:id="@+id/timerAddButton"></ImageButton>
+	</LinearLayout>
+	<LinearLayout android:layout_height="wrap_content"
+		android:id="@+id/timerMainRowEditTitleLinearLayout"
+		android:visibility="gone" android:layout_width="fill_parent">
+		<EditText android:layout_height="wrap_content"
+			android:layout_weight="1" android:id="@+id/timerTitleEditText"
+			android:text="Title" android:singleLine="true" android:imeOptions="actionDone"
+			android:layout_width="wrap_content"></EditText>
+	</LinearLayout>
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_weight="1" android:id="@+id/timerTimeLinearLayout"
+		android:gravity="center_horizontal|center" android:layout_width="fill_parent">
+		<ImageButton android:src="@drawable/left"
+			android:layout_height="wrap_content" android:layout_width="32dip"
+			android:id="@+id/timerLeftImageButton" android:layout_gravity="left|center_vertical"></ImageButton>
+		<LinearLayout android:id="@+id/timerLinearLayout3"
+			android:gravity="center" android:layout_weight="1"
+			android:orientation="horizontal" android:layout_height="wrap_content"
+			android:layout_width="wrap_content">
+			<Button android:background="@android:color/darker_gray"
+				android:text="+" android:layout_width="30dip" android:layout_marginRight="2dip"
+				android:textColor="@android:color/white" android:id="@+id/timerPlusDays"
+				android:layout_gravity="top" android:gravity="center" android:layout_height="15dip"></Button>
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="vertical" android:layout_height="wrap_content"
+				android:background="@drawable/time_bg" android:id="@+id/timerDaysLinearLayout"
+				android:paddingTop="3dip">
+				<FrameLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="30dip" android:id="@+id/timerDaysBGTextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="88"
+						android:textSize="30dip" android:id="@+id/timerDaysBG2TextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="30dip" android:id="@+id/timerDaysTextView"
+						android:textColor="@color/white" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+				</FrameLayout>
+				<TextView android:layout_height="wrap_content"
+					android:text="days" android:layout_gravity="center" android:id="@+id/timerTextView1"
+					android:layout_width="wrap_content"></TextView>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<Button android:background="@android:color/darker_gray" android:layout_marginRight="2dip"
+					android:text="+" android:layout_width="30dip" android:layout_marginLeft="15dip"
+					android:textColor="@android:color/white" android:id="@+id/timerPlusHrs"
+					android:gravity="center" android:layout_height="15dip"></Button>
+				<TextView android:layout_width="wrap_content" android:text=":"
+					android:textSize="45dip" android:layout_height="wrap_content"
+					android:id="@+id/timerTextView11" android:layout_gravity="center"></TextView>
+				<Button android:background="@android:color/darker_gray" android:layout_marginLeft="2dip"
+					android:text="-" android:layout_width="30dip" android:layout_marginRight="15dip"
+					android:textColor="@android:color/white" android:id="@+id/timerMinusDays"
+					android:gravity="center" android:layout_height="15dip"></Button>
+			</LinearLayout>
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="vertical" android:layout_height="wrap_content"
+				android:background="@drawable/time_bg" android:id="@+id/timerHrsLinearLayout"
+				android:paddingTop="3dip">
+				<FrameLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="45dip" android:id="@+id/timerHrsBGTextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="88"
+						android:textSize="45dip" android:id="@+id/timerHrsBG2TextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="45dip" android:id="@+id/timerHrsTextView"
+						android:textColor="@color/white" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+				</FrameLayout>
+				<TextView android:layout_height="wrap_content"
+					android:text="hrs" android:layout_gravity="center" android:id="@+id/timerTextView2"
+					android:layout_width="wrap_content"></TextView>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<Button android:background="@android:color/darker_gray" android:layout_marginRight="2dip"
+					android:text="+" android:layout_width="30dip" android:layout_marginLeft="15dip"
+					android:textColor="@android:color/white" android:id="@+id/timerPlusMins"
+					android:gravity="center" android:layout_height="15dip"></Button>
+				<TextView android:layout_width="wrap_content" android:text=":"
+					android:textSize="45dip" android:layout_height="wrap_content"
+					android:id="@+id/timerTextView13" android:layout_gravity="center"></TextView>
+				<Button android:background="@android:color/darker_gray" android:layout_marginLeft="2dip"
+					android:text="-" android:layout_width="30dip" android:layout_marginRight="15dip"
+					android:textColor="@android:color/white" android:id="@+id/timerMinusHrs"
+					android:gravity="center" android:layout_height="15dip"></Button>
+			</LinearLayout>
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="vertical" android:layout_height="wrap_content"
+				android:background="@drawable/time_bg" android:id="@+id/timerMinsLinearLayout"
+				android:paddingTop="3dip">
+				<FrameLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="45dip" android:id="@+id/timerMinsBGTextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="88"
+						android:textSize="45dip" android:id="@+id/timerMinsBG2TextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="45dip" android:id="@+id/timerMinsTextView"
+						android:textColor="@color/white" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+				</FrameLayout>
+				<TextView android:layout_height="wrap_content"
+					android:text="mins" android:layout_gravity="center" android:id="@+id/timerTextView3"
+					android:layout_width="wrap_content"></TextView>
+			</LinearLayout>
+			<LinearLayout android:orientation="vertical"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content">
+				<Button android:background="@android:color/darker_gray" android:layout_marginRight="2dip"
+					android:text="+" android:layout_width="30dip" android:layout_marginLeft="15dip"
+					android:textColor="@android:color/white" android:id="@+id/timerPlusSecs"
+					android:gravity="center" android:layout_height="15dip"></Button>
+				<TextView android:layout_width="wrap_content" android:text=":"
+					android:textSize="45dip" android:layout_height="wrap_content"
+					android:id="@+id/timerTextView15" android:layout_gravity="center"></TextView>
+				<Button android:background="@android:color/darker_gray" android:layout_marginLeft="2dip"
+					android:text="-" android:layout_width="30dip" android:layout_marginRight="15dip"
+					android:textColor="@android:color/white" android:id="@+id/timerMinusMins"
+					android:gravity="center" android:layout_height="15dip"></Button>
+			</LinearLayout>
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="vertical" android:layout_height="wrap_content"
+				android:background="@drawable/time_bg" android:id="@+id/timerSecsLinearLayout"
+				android:paddingTop="3dip">
+				<FrameLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="45dip" android:id="@+id/timerSecsBGTextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="88"
+						android:textSize="45dip" android:id="@+id/timerSecsBG2TextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+					<TextView android:gravity="center" android:text="00"
+						android:textSize="45dip" android:id="@+id/timerSecsTextView"
+						android:textColor="@color/white" android:layout_width="wrap_content"
+						android:layout_height="wrap_content"></TextView>
+				</FrameLayout>
+				<TextView android:layout_height="wrap_content"
+					android:text="secs" android:layout_gravity="center" android:id="@+id/timerTextView4"
+					android:layout_width="wrap_content"></TextView>
+			</LinearLayout>
+			<LinearLayout
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:orientation="vertical">
+				<TextView android:layout_width="30dip" android:text=" "
+					android:layout_height="15dip"
+					android:id="@+id/timerTextView17" android:layout_gravity="top"></TextView>
+				<TextView android:layout_width="wrap_content" android:text="."
+					android:textSize="45dip" android:layout_height="wrap_content"
+					android:id="@+id/timerTextView18" android:layout_gravity="center"></TextView>
+				<Button android:background="@android:color/darker_gray" android:layout_marginRight="10dip"
+					android:text="-" android:layout_width="30dip" android:layout_gravity="bottom" android:layout_marginLeft="2dip"
+					android:textColor="@android:color/white" android:id="@+id/timerMinusSecs"
+					android:gravity="center" android:layout_height="15dip"></Button>
+			</LinearLayout>
+			<LinearLayout android:layout_width="wrap_content"
+				android:orientation="vertical" android:layout_height="wrap_content"
+				android:background="@drawable/time_bg" android:id="@+id/timerTenthsLinearLayout"
+				android:layout_gravity="bottom" android:paddingTop="3dip">
+				<FrameLayout android:layout_width="wrap_content"
+					android:layout_height="wrap_content">
+					<TextView android:gravity="center" android:layout_height="wrap_content"
+						android:text="00" android:textSize="30dip" android:id="@+id/timerTenthsBGTextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
+					<TextView android:gravity="center" android:layout_height="wrap_content"
+						android:text="88" android:textSize="30dip" android:id="@+id/timerTenthsBG2TextView"
+						android:textColor="@color/blur" android:layout_width="wrap_content"></TextView>
+					<TextView android:gravity="center" android:layout_height="wrap_content"
+						android:text="00" android:textSize="30dip" android:id="@+id/timerTenthsTextView"
+						android:textColor="@color/white" android:layout_width="wrap_content"></TextView>
+				</FrameLayout>
+				<TextView android:layout_height="wrap_content"
+					android:text="1/100th" android:layout_gravity="center"
+					android:textSize="10dip" android:id="@+id/timerTextView5"
+					android:layout_width="wrap_content"></TextView>
+			</LinearLayout>
+		</LinearLayout>
+		<ImageButton android:src="@drawable/right"
+			android:layout_height="wrap_content" android:layout_width="32dip"
+			android:id="@+id/timerRightImageButton" android:layout_gravity="right|center_vertical"></ImageButton>
+	</LinearLayout>
+	<LinearLayout android:layout_height="wrap_content" android:orientation="horizontal"
+		android:layout_width="fill_parent">
+		<LinearLayout android:id="@+id/timerLinearLayout1"
+			android:layout_weight="1" android:layout_height="wrap_content"
+			android:layout_width="wrap_content" android:gravity="center">
+			<TextView android:layout_height="wrap_content" android:text="Interval #1/1"
+				android:textStyle="bold" android:layout_width="wrap_content"
+				android:id="@+id/timerIntervalTitleTextView"></TextView>
+			<ImageButton android:src="@drawable/delete_small"
+				android:layout_height="35dip" android:layout_width="wrap_content"
+				android:id="@+id/timerIntervalXButton"></ImageButton>
+			<ImageButton android:src="@drawable/add_small"
+				android:layout_height="35dip" android:layout_width="wrap_content"
+				android:id="@+id/timerIntervalAddButton"></ImageButton>
+			<ImageButton android:src="@drawable/left_small"
+				android:layout_height="35dip" android:layout_width="45dip"
+				android:id="@+id/timerIntervalLeftButton"></ImageButton>
+			<ImageButton android:src="@drawable/right_small"
+				android:layout_height="35dip" android:layout_width="45dip"
+				android:id="@+id/timerIntervalRightButton"></ImageButton>
+		</LinearLayout>
+		<LinearLayout android:id="@+id/timerLinearLayout2"
+			android:layout_weight="1" android:orientation="horizontal"
+			android:layout_height="wrap_content" android:layout_width="wrap_content"
+			android:gravity="center">
+			<TextView android:layout_height="wrap_content" android:text="3"
+				android:textStyle="bold" android:layout_width="wrap_content"
+				android:id="@+id/timerNumBeepsTextView"></TextView>
+			<TextView android:layout_width="wrap_content"
+				android:layout_height="wrap_content" android:text=" x "
+				android:id="@+id/timerBeepXTextView"></TextView>
+			<FrameLayout android:background="@color/blur" android:id="@+id/timerBeepFrameLayout" android:layout_height="wrap_content" android:layout_width="wrap_content">
+				<TextView android:clickable="true" android:layout_height="fill_parent"
+					android:layout_width="fill_parent" android:text="Beep"
+					android:gravity="center" android:ellipsize="end"
+					android:background="@android:drawable/list_selector_background" android:textColor="@color/white"
+					android:focusable="true" android:id="@+id/timerBeepTextView" android:paddingBottom="5dip" android:paddingLeft="5dip" android:paddingRight="5dip" android:paddingTop="5dip"></TextView>
+			</FrameLayout>
+			<Button android:layout_height="35dip" android:id="@+id/timerBeepsPlusButton"
+				android:text="+" android:layout_width="45dip"></Button>
+			<Button android:layout_height="35dip" android:id="@+id/timerBeepsMinusButton"
+				android:text="-" android:layout_width="45dip"></Button>
+			<CheckBox android:id="@+id/timerVibrateCheckBox" android:layout_gravity="center_vertical"
+				android:button="@drawable/vibrate_checkbox" android:layout_height="35dip"
+				android:layout_width="wrap_content"></CheckBox>
+		</LinearLayout>
+	</LinearLayout>
+	<LinearLayout android:layout_height="wrap_content"
+		android:layout_width="fill_parent" android:id="@+id/timerBottomButtonsLinearLayout">
+		<Button android:layout_height="40dip" android:gravity="center"
+			android:drawableLeft="@drawable/ic_media_play" android:id="@+id/timerStartStopResumeButton"
+			android:layout_weight="1" android:text="Start" android:layout_width="0dip"></Button>
+		<Button android:layout_height="40dip" android:gravity="center"
+			android:text="Reset" android:drawableLeft="@drawable/ic_menu_revert"
+			android:id="@+id/timerResetButton" android:layout_weight="1"
+			android:layout_width="0dip"></Button>
+	</LinearLayout>
+</LinearLayout>

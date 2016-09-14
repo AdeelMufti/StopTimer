@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+	<PreferenceCategory android:title="Timer Preferences">
+		<CheckBoxPreference android:key="timerDefaultVibratePref"
+			android:title="New Timers: Vibrate"
+			android:summary="All new timers/intervals will be set to vibrate by default"
+			android:defaultValue="@string/timerDefaultVibratePrefDefaultValue" />
+		<EditTextPreference android:key="timerDefaultNumBeepsPref"
+			android:title="New Timers"
+			android:summary="All new timers/intervals will have this many number of beeps/rings by default"
+			android:defaultValue="@string/timerDefaultNumBeepsPrefDefaultValue" />
+		<EditTextPreference android:key="timerDefaultBeepPref"
+			android:title="New Timers"
+			android:summary="All new timers/intervals will have this beep/ring by default"
+			android:defaultValue="@string/timerDefaultBeepPrefDefaultValue" />
+	</PreferenceCategory>
+	<PreferenceCategory android:title="Main Preferences">
+		<ListPreference android:key="volumeButtonsPref"
+			android:title="Volume Buttons"
+			android:summary="Volume up/down buttons: start/stop (vol up) and reset (vol down), or control media volume"
+			android:defaultValue="@string/volumeButtonsPrefDefaultValue"
+			android:entries="@array/volumeButtonsPrefArray" android:entryValues="@array/volumeButtonsPrefArrayValues" />
+		<CheckBoxPreference android:key="hapticFeedbackPref"
+			android:title="Haptic Feedback" android:summary="Enable haptic feedback on screen taps"
+			android:defaultValue="@string/hapticFeedbackPrefDefaultValue" />
+		<CheckBoxPreference android:key="keepScreenOnPref"
+			android:title="Keep Screen On" android:summary="Always keep screen on when app is running"
+			android:defaultValue="@string/keepScreenOnPrefDefaultValue" />
+		<ListPreference android:key="screenOrientationPref"
+			android:title="Screen Orientation"
+			android:summary="Screen orientation: Auto, Landscape-only, Portrait-only"
+			android:defaultValue="@string/screenOrientationPrefDefaultValue"
+			android:entries="@array/screenOrientationPrefArray"
+			android:entryValues="@array/screenOrientationPrefArrayValues" />
+	</PreferenceCategory>
+</PreferenceScreen>

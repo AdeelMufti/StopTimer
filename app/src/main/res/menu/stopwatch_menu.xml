@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+  xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/swStopAllMenuItem" android:title="Stop All Stopwatches" android:icon="@drawable/stopwatch_stop" android:titleCondensed="Stop All"></item>
+    
+</menu>

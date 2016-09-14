@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="business_name">SynAppze</string>
+    <string name="app_name">StopTimer</string>
+    <string name="app_version_name">1.2.0</string>
+    <string name="date_time_format">hh:mm:ssa MM/dd/yyyy</string>
+    <string name="shared_user_label">SynAppze</string>
+
+    <string name="timerDefaultVibratePrefDefaultValue">true</string>
+    <string name="timerDefaultNumBeepsPrefDefaultValue">3</string>
+    <string name="timerDefaultBeepPrefDefaultValue">beep1</string>
+    <string name="volumeButtonsPrefDefaultValue">0</string>
+    <string name="hapticFeedbackPrefDefaultValue">true</string>
+    <string name="keepScreenOnPrefDefaultValue">true</string>
+    <string name="screenOrientationPrefDefaultValue">0</string>
+
+    <string name="admob_unit_id">ca-app-pub-3782968683928216/5487824283</string>
+
+</resources>

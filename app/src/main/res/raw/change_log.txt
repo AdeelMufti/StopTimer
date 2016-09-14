@@ -1,0 +1,22 @@
+<v1.2.0, Sep 10 2016>
+-Revamped layout
+-Added time entry popup for timers
+-Fixed some bugs
+
+<v1.1.0, Jul 26 2011>
+-Changed app icon
+-Completely revamped app interface!
+-Added finger swiping and smooth switching between multiple timers and stopwatches, much like the home screen!
+-Added ability to run app in both portrait and landscape mode 
+-Added haptic feedback (and preference to turn it off)
+-Added miscellaneous preferences and settings
+-Changed time font to be more prominent
+-Added ability to use volume up/down buttons to start/stop and reset timers/stopwatches
+-Added new beeps for timers and ability to pick unique beeps or ringtones for each timer/interval
+-Enabled for Google TV
+
+<v1.0.1>
+-Changed some labels
+
+<v1.0.0>
+-Initial release

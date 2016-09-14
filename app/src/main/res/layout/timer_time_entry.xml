@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal" android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:gravity="center">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:maxLength="2"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:id="@+id/daysEditText"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="days"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" : "
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:maxLength="2"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:id="@+id/hrsEditText"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hrs"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" : "
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:maxLength="2"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:id="@+id/minsEditText"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="mins"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=" : "
+        android:layout_gravity="center_vertical" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" android:orientation="vertical">
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:maxLength="2"
+            android:inputType="number"
+            android:selectAllOnFocus="true"
+            android:id="@+id/secsEditText"
+            android:layout_gravity="center_vertical"
+            android:gravity="center_vertical" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="secs"
+            android:layout_gravity="center_vertical" />
+    </LinearLayout>
+
+</LinearLayout>
