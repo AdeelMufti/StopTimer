@@ -1,6 +1,6 @@
 # StopTimer
 
-Full source code for an Android application currently available on Google Play: StopTimer - Stopwatch and Timer. This repository made freely available as an example to fellow Android developers by its author. It includes the full project for Android Studio.
+Full source code for an Android application currently available on Google Play: **StopTimer - Stopwatch and Timer**. This repository made freely available as an example to fellow Android developers by its author. It includes the full project for Android Studio.
 
 
 ## Synopsis
